@@ -5,7 +5,6 @@ using UnityEngine;
 public class Player : MonoBehaviour {
 
     public Camera playerCamera;
-    public GameObject bulletPrefab;
 
 	// Use this for initialization
 	void Start () {
@@ -16,7 +15,7 @@ public class Player : MonoBehaviour {
 	void Update () {
         if (Input.GetMouseButtonDown(0))
         {
-            GameObject bulletObject = Instantiate(bulletPrefab);
+            GameObject bulletObject = ObjectPoolingManager.Instance.GetBullet();
             bulletObject.transform.position = playerCamera.transform.position;
             bulletObject.transform.forward = playerCamera.transform.forward;
         }

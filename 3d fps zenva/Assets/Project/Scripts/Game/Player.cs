@@ -7,6 +7,7 @@ public class Player : MonoBehaviour {
 
     [Header("Visuals")]
     public Camera playerCamera;
+    public GameObject gun;
 
     [Header("GamePlay")]
     public int initialAmmo = 10;
@@ -24,8 +25,8 @@ public class Player : MonoBehaviour {
         {
             ammo--;
             GameObject bulletObject = ObjectPoolingManager.Instance.GetBullet();
-            bulletObject.transform.position = playerCamera.transform.position;
-            bulletObject.transform.forward = playerCamera.transform.forward;
+            bulletObject.transform.position = gun.transform.position;
+            bulletObject.transform.forward = gun.transform.forward;
         }
 	}
 

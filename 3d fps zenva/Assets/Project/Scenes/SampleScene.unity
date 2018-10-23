@@ -201,6 +201,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerCamera: {fileID: 964123691}
+  gun: {fileID: 1564996394}
   initialAmmo: 10
 --- !u!1 &529150702
 GameObject:
@@ -333,6 +334,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   container: {fileID: 1285566973}
   rotationSpeed: 180
+  ammo: 10
 --- !u!65 &560221401
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -343,7 +345,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.7, y: 1, z: 1}
+  m_Size: {x: 1.92, y: 1, z: 1.9}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &560221402
 Rigidbody:
@@ -790,7 +792,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletAmount: 10
-  bulletPrefab: {fileID: 1859519301185736, guid: 7ffadd8f7d5cf4f4e98e25a8cb470038,
+  bulletPrefab: {fileID: 1087206122195346, guid: 7ffadd8f7d5cf4f4e98e25a8cb470038,
     type: 2}
 --- !u!1 &1285566973
 GameObject:

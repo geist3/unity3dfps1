@@ -28,4 +28,15 @@ public class Player : MonoBehaviour {
             bulletObject.transform.forward = playerCamera.transform.forward;
         }
 	}
+
+    // check for collisions
+    private void OnControllerColliderHit(ControllerColliderHit hit)
+    {
+        AmmoCrate ammoCrate = hit.collider.gameObject.GetComponent<AmmoCrate>();
+        if (ammoCrate != null)
+        {
+            ammo += ammoCrate.ammo;
+            Destroy(ammoCrate.gameObject);
+        }
+    }
 }

@@ -4,19 +4,23 @@ using UnityEngine;
 
 public class Player : MonoBehaviour {
 
+    private int ammo;
+    private int health;
 
     [Header("Visuals")]
     public Camera playerCamera;
     public GameObject gun;
 
     [Header("GamePlay")]
+    public int initialHealth = 100;
     public int initialAmmo = 10;
     public int Ammo { get { return ammo; } }
-    private int ammo;
+    public int Health { get { return health; } }
 
     // Use this for initialization
     void Start () {
         ammo = initialAmmo;
+        health = initialHealth;
 	}
 	
 	// Update is called once per frame

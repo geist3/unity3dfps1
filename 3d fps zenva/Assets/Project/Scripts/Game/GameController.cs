@@ -9,20 +9,26 @@ public class GameController : MonoBehaviour {
     public Player player;
 
     [Header("UI")]
+    public Text healthText;
     public Text ammoText;
 
-    private string oldText = "";
+    private string oldAmmoText = "";
+    private string oldHealthText = "";
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
 		
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        if (oldText != ammoText.text)
+        if (oldAmmoText != ammoText.text)
         {
             ammoText.text = "Ammo: " + player.Ammo;
         }
-	}
+        if (oldHealthText != healthText.text)
+        {
+            healthText.text = "Health: " + player.Health;
+        }
+    }
 }
